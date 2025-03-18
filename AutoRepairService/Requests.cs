@@ -37,5 +37,8 @@ namespace AutoRepairService
         public virtual ICollection<Reports> Reports { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RequestExecution> RequestExecution { get; set; }
+        public string CarModel { get; internal set; }
+        public string ClientName { get; internal set; }
+        public string Description { get; internal set; }
     }
 }

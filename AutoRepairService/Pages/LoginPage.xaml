@@ -15,6 +15,8 @@
             <TextBlock Width="200" Height="25">Пароль</TextBlock>
             <PasswordBox Name="PasswordBox" Width="200" Height="25" Margin="10,10,10,0" />
             <Button Name="LoginButton" Width="100" Height="30" Margin="10,80,10,0" Content="Войти" Click="LoginButton_Click"/>
+            <TextBlock>имя админа: admin пароль: admin123</TextBlock>
+            <TextBlock>имя клиента: client1 пароль: client123</TextBlock>
         </StackPanel>
     </Grid>
 </Page>

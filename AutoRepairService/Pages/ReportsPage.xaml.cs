@@ -16,19 +16,25 @@ using System.Windows.Shapes;
 namespace AutoRepairService.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ClientPage.xaml
+    /// Логика взаимодействия для ReportsPage.xaml
     /// </summary>
-    public partial class ClientPage : Page
+    public partial class ReportsPage : Page
     {
-        private Users _currentUser;
-        public ClientPage(Users user)
+        public AutoRepairServiceEntities db = new AutoRepairServiceEntities();
+
+        public ReportsPage()
         {
             InitializeComponent();
-            _currentUser = user;
+            LoadReports();
         }
-        private void CreateRequestButton_Click(object sender, RoutedEventArgs e)
+
+        private void LoadReports()
         {
-            NavigationService.Navigate(new CreateRequestPage());
+            ReportsDataGrid.ItemsSource = db.Reports.ToList();
+        }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }

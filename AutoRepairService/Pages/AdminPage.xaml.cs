@@ -26,5 +26,24 @@ namespace AutoRepairService.Pages
             InitializeComponent();
             _currentUser = user;
         }
+        private void ViewRequestsButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ViewRequestsPage());
+        }
+
+        private void ViewClientsButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ClientsPage());
+        }
+
+        private void ViewMechanicsButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new MechanicsPage());
+        }
+
+        private void ViewReportsButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ReportsPage());
+        }
     }
 }

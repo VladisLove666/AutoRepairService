@@ -9,6 +9,8 @@
       Title="ClientPage">
 
     <Grid>
-        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Создать новую заявку" Click="CreateRequestButton_Click" Margin="10"/>
+        </StackPanel>
     </Grid>
 </Page>

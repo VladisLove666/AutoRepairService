@@ -9,6 +9,12 @@
       Title="AdminPage">
 
     <Grid>
-        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            
+            <Button Content="Просмотр заявок" Click="ViewRequestsButton_Click" Margin="10"/>
+            <Button Content="Просмотр клиентов" Click="ViewClientsButton_Click" Margin="10"/>
+            <Button Content="Просмотр механиков" Margin="10"/>
+            <Button Content="Просмотр отчетов" Click="ViewReportsButton_Click" Margin="10"/>
+        </StackPanel>
     </Grid>
 </Page>
