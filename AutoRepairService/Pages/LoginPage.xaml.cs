@@ -20,6 +20,7 @@ namespace AutoRepairService.Pages
     /// </summary>
     public partial class LoginPage : Page
     {
+
         public LoginPage()
         {
             InitializeComponent();
@@ -31,14 +32,14 @@ namespace AutoRepairService.Pages
 
             try
             {
-                var user = App.db.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
+                var user = ((App)Application.Current).db.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
 
                 if (user != null)
                 {
                     MessageBox.Show($"Добро пожаловать, {user.Username}!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
 
 
-                    var role = App.db.Roles.FirstOrDefault(r => r.RoleID == user.RoleID);
+                    var role = ((App)Application.Current).db.Roles.FirstOrDefault(r => r.RoleID == user.RoleID);
 
                     if (role != null)
                     {
